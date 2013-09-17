@@ -8,6 +8,7 @@ var routes = require('./routes');
 var user = require('./routes/user');
 var http = require('http');
 var path = require('path');
+var ArticleProvider = require('./articleprovider-memory.js')
 
 var app = express();
 
