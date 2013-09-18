@@ -5,7 +5,7 @@
 
 var express = require('express');
 var routes = require('./routes');
-var user = require('./routes/user');
+var blog = require('./routes/blog');
 var http = require('http');
 var path = require('path');
 var ArticleProvider = require('./articleprovider-memory.js')
@@ -30,7 +30,8 @@ if ('development' == app.get('env')) {
 }
 
 app.get('/', routes.index);
-app.get('/users', user.list);
+app.get('/blog/new', blog.get_new);
+app.post('/blog/new', blog.post_new);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
