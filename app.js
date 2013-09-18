@@ -8,7 +8,7 @@ var routes = require('./routes');
 var blog = require('./routes/blog');
 var http = require('http');
 var path = require('path');
-var ArticleProvider = require('./articleprovider-memory.js')
+var ArticleProvider = require('./articleprovider-mongodb.js')
 
 var app = express();
 
